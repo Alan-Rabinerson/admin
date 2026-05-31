@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(& \"C:\\\\wamp64\\\\bin\\\\mysql\\\\mysql8.4.3\\\\bin\\\\mysql.exe\" -u root -e \"ALTER TABLE proyecto_db.posts ADD COLUMN IF NOT EXISTS published TINYINT\\(1\\) NOT NULL DEFAULT 0;\" 2>&1)",
+      "PowerShell(& \"C:\\\\wamp64\\\\bin\\\\mysql\\\\mysql9.1.0\\\\bin\\\\mysql.exe\" -u root -e \"ALTER TABLE proyecto_db.posts ADD COLUMN IF NOT EXISTS published TINYINT\\(1\\) NOT NULL DEFAULT 0;\" 2>&1)",
+      "PowerShell(& \"C:\\\\wamp64\\\\bin\\\\mysql\\\\mysql9.1.0\\\\bin\\\\mysql.exe\" -u root -P 3306 -h 127.0.0.1 -e \"ALTER TABLE proyecto_db.posts ADD COLUMN IF NOT EXISTS published TINYINT\\(1\\) NOT NULL DEFAULT 0;\" 2>&1)",
+      "PowerShell(& \"C:\\\\wamp64\\\\bin\\\\php\\\\php8.3.14\\\\php.exe\" -r \"require 'C:/wamp64/www/admin/includes/db.php'; \\\\$r = mysqli_query\\(\\\\$conn, 'ALTER TABLE posts ADD COLUMN IF NOT EXISTS published TINYINT\\(1\\) NOT NULL DEFAULT 0'\\); echo \\\\$r ? 'OK' : mysqli_error\\(\\\\$conn\\);\")"
+    ]
+  }
+}
