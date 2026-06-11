@@ -16,7 +16,7 @@ $stmt = mysqli_prepare($conn,
     'SELECT p.id, p.title, p.subtitle, p.slug, p.content, p.created_at, u.username
      FROM posts p
      LEFT JOIN users u ON u.id = p.author_id
-     WHERE p.slug = ? LIMIT 1'
+     WHERE p.slug = ? AND p.published = 1 LIMIT 1'
 );
 if (!$stmt) {
     http_response_code(500);

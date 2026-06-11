@@ -10,6 +10,7 @@ $limit = isset($_GET['limit']) ? max(1, min(20, (int)$_GET['limit'])) : 5;
 $sql = 'SELECT p.id, p.title, p.subtitle, p.slug, p.created_at, u.username
         FROM posts p
         LEFT JOIN users u ON u.id = p.author_id
+        WHERE p.published = 1
         ORDER BY p.created_at DESC
         LIMIT ?';
 

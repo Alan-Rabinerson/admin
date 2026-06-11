@@ -29,21 +29,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Login - Admin</title>
-  <link rel="stylesheet" href="styles/inline-extracted.css">
+  <link rel="stylesheet" href="styles/app.css">
 </head>
 <body>
-  <div class="auth-shell">
-    <div class="auth-card">
-      <h1>Panel Admin</h1>
-      <?php if ($error): ?><div class="text-error"><?php echo e($error); ?></div><?php endif; ?>
+  <div class="min-h-screen grid place-items-center p-6">
+    <div class="w-full max-w-[420px] bg-white border border-[#d8e4d6] shadow-[0_4px_18px_rgba(25,54,28,0.08)] rounded p-7">
+      <h1 class="mt-0 mb-4.5 text-[22px] text-brand">Panel Admin</h1>
+      <?php if ($error): ?><div class="text-[#bb0000]"><?php echo e($error); ?></div><?php endif; ?>
       <form method="post" action="">
-        <label>Usuario
-          <input type="text" name="username" value="<?php echo e($_POST['username'] ?? ''); ?>">
+        <label class="block mt-3">Usuario
+          <input type="text" name="username" value="<?php echo e($_POST['username'] ?? ''); ?>" class="w-full p-2 mt-1.5 border border-[#d0d0d0] rounded-xs bg-white text-[#333] text-sm box-border">
         </label>
-        <label>Contraseña
-          <input type="password" name="password">
+        <label class="block mt-3">Contraseña
+          <input type="password" name="password" class="w-full p-2 mt-1.5 border border-[#d0d0d0] rounded-xs bg-white text-[#333] text-sm box-border">
         </label>
-        <button type="submit" class="btn btn-primary">Entrar</button>
+        <button type="submit" class="btn btn-primary mt-3">Entrar</button>
       </form>
     </div>
   </div>

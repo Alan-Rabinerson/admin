@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build": "tailwindcss -i ./styles/main.css -o ./styles/app.css",
+    "watch": "tailwindcss -i ./styles/main.css -o ./styles/app.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0"
+  }
+}
